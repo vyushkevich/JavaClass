@@ -1,0 +1,40 @@
+@startuml PersonObjectDiagram
+class Person {
+    - name: String
+    - surname: String
+    - idNumber: String
+    - birthYear: int
+    - countryOfBirth: String
+    - gender: char
+    --
+    + printDetails(): void
+    + getName(): String
+    + getSurname(): String
+    + getIdNumber(): String
+    + getBirthYear(): int
+    + getCountryOfBirth(): String
+    + getGender(): char
+}
+
+' Example instances of Person objects
+object person1 {
+    name = "Alice"
+    surname = "Smith"
+    idNumber = "123456"
+    birthYear = 1990
+    countryOfBirth = "USA"
+    gender = 'M'
+}
+
+object person2 {
+    name = "Bob"
+    surname = "Johnson"
+    idNumber = "789012"
+    birthYear = 1985
+    countryOfBirth = "Canada"
+    gender = 'H'
+}
+
+person1 --> Person
+person2 --> Person
+@enduml
